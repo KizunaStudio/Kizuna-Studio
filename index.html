@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kizuna Studio - Studio créatif web, design & IA</title>
+  <meta name="description" content="Kizuna Studio accompagne les petites entreprises, artisans, entrepreneurs et marques dans la création d'identités visuelles, de sites web et d’images personnalisées générées par IA.">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/style-accueil.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/ks.png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- ===== COOKIE CONSENT BANNER ===== -->
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    Ce site utilise des cookies pour assurer son bon fonctionnement et améliorer ton expérience.  
+    <a href="cookies.html">En savoir plus</a>
+  </p>
+  <div class="cookie-buttons">
+    <button id="accept-cookies" class="btn-cookie accept">Accepter</button>
+    <button id="reject-cookies" class="btn-cookie reject">Refuser</button>
+  </div>
+</div>
+
+<script src="js/cookies.js"></script>
+<!-- ===== BOUTON RETOUR HAUT ===== -->
+<button id="scrollTopBtn" class="scroll-top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="logo">
+  <a href="index.html">
+    <img src="images/logokizuna.png" alt="Logo Kizuna Studio">
+  </a>
+</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="creations-ia.html">Créations IA</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="partenariat.html">Partenariat</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <img src="images/logo-kizuna.png" alt="Kizuna Studio" class="hero-logo" />
+      <h1>Kizuna Studio</h1>
+      <p class="subtitle">
+        Studio créatif spécialisé en <strong>design, web et créations IA</strong> pour artisans, entrepreneurs et marques.
+      </p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn-primary">Découvrir mes services</a>
+        <a href="creations-ia.html" class="btn-secondary">Créations IA personnalisées</a>
+      </div>
+    </div>
+    <div class="hero-bg"></div>
+  </header>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="apropos fade-section">
+    <h2>Un studio créatif à taille humaine</h2>
+    <p>
+      Chez <strong>Kizuna Studio</strong>, chaque projet est une collaboration fondée sur l’écoute, la créativité et l’innovation.
+      Mon objectif : donner vie à votre univers visuel avec authenticité, élégance et technologie.
+    </p>
+  </section>
+
+  <!-- ===== APERÇU DES SERVICES ===== -->
+  <section class="services-preview fade-section">
+    <h2>Mes domaines d’expertise</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Site web</h3>
+        <p>Sites vitrines modernes, responsive et optimisés SEO pour votre activité.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-pen-nib"></i>
+        <h3>Identité visuelle</h3>
+        <p>Logos, chartes graphiques et supports cohérents à votre image.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-brain"></i>
+        <h3>Créations IA</h3>
+        <p>Des images générées sur mesure, selon vos idées et besoins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta fade-section">
+    <h2>Vous avez une idée ?</h2>
+    <p>Transformons-la ensemble en un projet unique.</p>
+    <a href="contact.html" class="btn-primary">Me contacter</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+ <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Colonne 1 : Contact -->
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <p>📞 06 28 72 13 27</p>
+      <p>📧 kizuna.studio.contact@gmail.com</p>
+      <p>📍 Aups, 83630, France</p>
+      <p>SIREN : 99 166 5555</p>
+    </div>
+
+    <!-- Colonne 2 : Réseaux sociaux -->
+    <div class="footer-column center">
+      <h3>Suivez Kizuna Studio</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/kizuna__studio/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/17yPfh5jet/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <!-- Colonne 3 : Liens du site -->
+    <div class="footer-column right">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="creations-ia.html">Créations IA</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Kizuna Studio — Tous droits réservés</p>
+    <p>
+      <a href="mentions-legales.html">Mentions légales</a> • 
+      <a href="politique-confidentialite.html">Politique de confidentialité</a> • 
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
+</footer>
+
+
+  <script src="https://kit.fontawesome.com/a2e0e6da3b.js" crossorigin="anonymous"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
