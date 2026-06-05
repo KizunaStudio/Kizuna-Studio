@@ -63,13 +63,27 @@
     </div>
   </header>
 
+  <!-- ===== FILTRES PORTFOLIO ===== -->
+<section class="portfolio-filters fade-section">
+  <h2>Explorer mes créations</h2>
+  <p>Filtrez les projets selon le type de réalisation.</p>
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="site">Sites web</button>
+    <button class="filter-btn" data-filter="identite">Identité visuelle</button>
+    <button class="filter-btn" data-filter="print">Cartes & affiches</button>
+    <button class="filter-btn" data-filter="ia">Créations IA</button>
+  </div>
+</section>
+
   <!-- === PORTFOLIO GRID AVEC CAROUSEL === -->
 <div class="carousel-container">
   <button class="carousel-btn prev">&#10094;</button>
   <div class="carousel-track">
 
-    <div class="portfolio-card">
-      <img src="images/portfolio1.jpg" alt="Site La Ruche Dorée">
+<div class="portfolio-card" data-category="site">
+        <img src="images/portfolio1.jpg" alt="Site La Ruche Dorée">
       <div class="card-info">
         <h3>La Ruche Dorée</h3>
         <p>Site vitrine pour un producteur de miel provençal.</p>
@@ -77,7 +91,7 @@
       </div>
     </div>
 
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="site">
       <img src="images/portfolio2.jpg" alt="Site Café des Collines">
       <div class="card-info">
         <h3>Café des Collines</h3>
@@ -86,7 +100,7 @@
       </div>
     </div>
 
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="site">
       <img src="images/portfolio3.jpg" alt="Site FutureGear">
       <div class="card-info">
         <h3>FutureGear</h3>
@@ -95,7 +109,7 @@
       </div>
     </div>
 
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="site">
       <img src="images/portfolio4.jpg" alt="Site EcoStyle">
       <div class="card-info">
         <h3>ÉcoStyle</h3>
@@ -104,7 +118,7 @@
       </div>
     </div>
 
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="site">
       <img src="images/portfolio5.jpg" alt="Maison Liora">
       <div class="card-info">
         <h3>Maison Liora</h3>
@@ -113,7 +127,7 @@
       </div>
     </div>
 
-    <div class="portfolio-card">
+    <div class="portfolio-card" data-category="site">
       <img src="images/portfolio6.jpg" alt="Komoraï Voyance">
       <div class="card-info">
         <h3>Komoraï Voyance</h3>
@@ -128,21 +142,73 @@
 
 
   <!-- ===== SECTION LOGOS ===== -->
-  <section class="logos fade-section">
-    <h2>Identités visuelles,logos & flyers</h2>
-    <p>Quelques créations graphiques conçues sur mesure pour différentes marques.</p>
+ <!-- ===== GALERIE GRAPHIQUE ===== -->
+<section class="logos fade-section">
+  <h2>Identités visuelles & supports graphiques</h2>
+  <p>Quelques créations graphiques conçues sur mesure pour différents projets.</p>
 
-    <div class="logos-grid">
-      <img src="images/logo1.png" alt="Logo exemple 1">
-      <img src="images/logo2.png" alt="Logo exemple 2">
-      <img src="images/logo3.png" alt="Logo exemple 3">
-      <img src="images/logo4.png" alt="Logo exemple 4">
-      <img src="images/logo5.png" alt="Logo exemple 1">
-      <img src="images/logo6.png" alt="Logo exemple 2">
-      <img src="images/logo7.png" alt="Logo exemple 3">
-      <img src="images/logo8.png" alt="Logo exemple 4">
+  <div class="portfolio-gallery">
+
+    <div class="gallery-item" data-category="identite">
+      <img src="images/logo1.png" alt="Identité visuelle exemple 1">
     </div>
-  </section>
+
+    <div class="gallery-item" data-category="identite">
+      <img src="images/logo2.png" alt="Identité visuelle exemple 2">
+    </div>
+
+    <div class="gallery-item" data-category="identite">
+      <img src="images/logo3.png" alt="Affiche exemple 1">
+    </div>
+
+    <div class="gallery-item" data-category="identite">
+      <img src="images/logo4.png" alt="Support imprimé exemple 2">
+    </div>
+
+    <div class="gallery-item" data-category="print">
+      <img src="images/logo5.png" alt="Création IA exemple 1">
+    </div>
+
+    <div class="gallery-item" data-category="print">
+      <img src="images/logo6.png" alt="Création IA exemple 2">
+    </div>
+
+    <div class="gallery-item" data-category="print">
+      <img src="images/logo7.png" alt="Flyer exemple">
+    </div>
+
+    <div class="gallery-item" data-category="print">
+      <img src="images/logo8.png" alt="Univers graphique exemple">
+    </div>
+
+     <div class="gallery-item" data-category="ia">
+      <img src="images/ia1.png" alt="Univers graphique exemple">
+    </div>
+
+     <div class="gallery-item" data-category="ia">
+      <img src="images/ia2.png" alt="Univers graphique exemple">
+    </div>
+
+     <div class="gallery-item" data-category="ia">
+      <img src="images/ia3.png" alt="Univers graphique exemple">
+    </div>
+
+     <div class="gallery-item" data-category="ia">
+      <img src="images/ia4.png" alt="Univers graphique exemple">
+    </div>
+
+     <div class="gallery-item" data-category="ia">
+      <img src="images/ia5.png" alt="Univers graphique exemple">
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Aperçu agrandi" id="lightboxImg">
+</div>
 
   <!-- ===== FOOTER ===== -->
  <footer class="footer">
