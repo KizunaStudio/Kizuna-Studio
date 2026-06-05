@@ -103,6 +103,109 @@
     </div>
   </section>
 
+  <!-- ===== MINI-JEU KIZUNA ===== -->
+<section id="mini-jeu" class="kizuna-game fade-section">
+  <div class="game-container">
+    <span class="game-tag">Expérience interactive</span>
+
+    <h2>Découvre ton projet idéal</h2>
+    <p class="game-intro">
+      Réponds à quelques questions et découvre les éléments essentiels pour faire grandir ton image.
+    </p>
+
+    <div class="game-card">
+
+      <!-- Progression -->
+      <div class="game-progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- ÉTAPE 1 -->
+      <div class="game-step active" data-step="1">
+        <h3>Qui es-tu ?</h3>
+        <div class="game-options">
+          <button data-value="artisan">Artisan</button>
+          <button data-value="commerce">Commerce</button>
+          <button data-value="association">Association</button>
+          <button data-value="createur">Créateur de contenu</button>
+        </div>
+      </div>
+
+      <!-- ÉTAPE 2 -->
+      <div class="game-step" data-step="2">
+        <h3>Ton besoin principal ?</h3>
+        <div class="game-options">
+          <button data-value="clients">Trouver des clients</button>
+          <button data-value="visibilite">Être plus visible</button>
+          <button data-value="site">Créer un site web</button>
+          <button data-value="image">Moderniser mon image</button>
+        </div>
+      </div>
+
+      <!-- ÉTAPE 3 -->
+      <div class="game-step" data-step="3">
+        <h3>Quel style te correspond le plus ?</h3>
+        <div class="game-options">
+          <button data-value="moderne">Moderne</button>
+          <button data-value="elegant">Élégant</button>
+          <button data-value="naturel">Naturel</button>
+          <button data-value="creatif">Créatif</button>
+        </div>
+      </div>
+
+      <!-- RÉSULTAT -->
+      <div class="game-result" id="gameResult">
+        <h3>Ton univers commence à prendre forme ✨</h3>
+
+       <div class="constellation-map">
+  <svg class="constellation-lines" viewBox="0 0 600 300">
+    <line x1="100" y1="90" x2="250" y2="60"></line>
+    <line x1="250" y1="60" x2="420" y2="110"></line>
+    <line x1="420" y1="110" x2="330" y2="230"></line>
+    <line x1="330" y1="230" x2="160" y2="210"></line>
+    <line x1="160" y1="210" x2="100" y2="90"></line>
+  </svg>
+
+  <div class="kizuna-star star-logo">Logo</div>
+  <div class="kizuna-star star-site">Site web</div>
+  <div class="kizuna-star star-social">Réseaux</div>
+  <div class="kizuna-star star-card">Carte</div>
+  <div class="kizuna-star star-affiche">Affiche</div>
+</div>
+        <p id="resultText"></p>
+
+        <a href="contact.html" class="btn-primary">Demander un devis</a>
+        <button class="restart-game" id="restartGame">Recommencer</button>
+
+        <div class="wheel-bonus">
+  <h3>🎁 Bonus Kizuna débloqué !</h3>
+  <p>Tourne la roue et découvre ton avantage.</p>
+
+  <div class="wheel-container">
+    <div class="wheel" id="kizunaWheel">
+  <div class="wheel-label label-1">🔍<span>Audit gratuit</span></div>
+  <div class="wheel-label label-2">✅<span>Checklist site web</span></div>
+  <div class="wheel-label label-3">📱<span>Conseils Instagram</span></div>
+  <div class="wheel-label label-4">✨<span>Mini diagnostic</span></div>
+  <div class="wheel-label label-5">🏷️<span>-5% logo</span></div>
+  <div class="wheel-label label-6">📄<span>-5% flyer</span></div>
+  <div class="wheel-label label-7">💡<span>Astuce marketing</span></div>
+  <div class="wheel-label label-8">🌐<span>Conseil domaine</span></div>
+
+  <div class="wheel-center">K</div>
+</div>
+  </div>
+
+  <button class="spin-btn" id="spinWheel">Tourner la roue</button>
+
+  <p class="wheel-result" id="wheelResult"></p>
+<a href="#" class="btn-primary claim-bonus" id="claimBonus">Réclamer mon bonus</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
   <!-- ===== CTA ===== -->
   <section class="cta fade-section">
     <h2>Vous avez une idée ?</h2>
