@@ -1,4 +1,8 @@
-/* === PAGE PARTENARIAT — KIZUNA STUDIO === */
+/* === PAGE COLLABORATION — KIZUNA STUDIO === */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -9,6 +13,7 @@ body {
 }
 
 /* === NAVBAR === */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,7 +28,7 @@ body {
 }
 
 .logo {
-  width: 85px; /* taille du cercle */
+  width: 85px;
   height: 85px;
   border-radius: 50%;
   overflow: hidden;
@@ -49,13 +54,13 @@ body {
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-/* === LUEUR CONTINUE SUR LE CONTOUR === */
 @keyframes logoGlow {
   0%, 100% {
     box-shadow: 0 0 15px rgba(76, 201, 240, 0.3),
                 0 0 30px rgba(162, 89, 255, 0.2);
     transform: scale(1);
   }
+
   50% {
     box-shadow: 0 0 25px rgba(162, 89, 255, 0.5),
                 0 0 45px rgba(76, 201, 240, 0.4);
@@ -63,7 +68,6 @@ body {
   }
 }
 
-/* === SURVOL === */
 .logo:hover {
   transform: scale(1.1);
   box-shadow: 0 0 45px rgba(162, 89, 255, 0.6),
@@ -74,8 +78,6 @@ body {
   transform: scale(1.12);
   filter: brightness(1.2);
 }
-
-
 
 .nav-links {
   list-style: none;
@@ -115,27 +117,64 @@ body {
 }
 
 /* === HERO === */
+
 .hero-partenariat {
-  height: 60vh;
-  background: radial-gradient(circle at 20% 40%, rgba(76,201,240,0.25), transparent 60%),
-              radial-gradient(circle at 80% 70%, rgba(162,89,255,0.25), transparent 60%),
-              linear-gradient(135deg, #3A0CA3, #7209B7);
+  min-height: 70vh;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(76,201,240,0.25), transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(162,89,255,0.28), transparent 60%),
+    linear-gradient(135deg, #1E1B3A, #3A0CA3, #7209B7);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 5rem 2rem;
+}
+
+.hero-partenariat::before {
+  content: "";
+  position: absolute;
+  width: 220%;
+  height: 220%;
+  background:
+    radial-gradient(circle, rgba(76,201,240,0.12), transparent 55%),
+    radial-gradient(circle, rgba(162,89,255,0.12), transparent 55%);
+  animation: heroMove 18s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+@keyframes heroMove {
+  from {
+    transform: translate(-8%, -6%) rotate(0deg);
+  }
+  to {
+    transform: translate(8%, 6%) rotate(8deg);
+  }
 }
 
 .hero-text {
   z-index: 2;
-  max-width: 700px;
+  max-width: 850px;
   padding: 2rem;
+  position: relative;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 30px;
+  background: rgba(76,201,240,0.15);
+  border: 1px solid rgba(76,201,240,0.35);
+  color: #4CC9F0;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .hero-partenariat h1 {
-  font-size: 3rem;
+  font-size: 3.4rem;
   background: linear-gradient(90deg, #4CC9F0, #A259FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -143,82 +182,133 @@ body {
 }
 
 .hero-partenariat p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: rgba(255,255,255,0.9);
-}
-
-/* === RESPONSIVE HERO TEXT (Partenariat) === */
-@media (max-width: 768px) {
-  .hero-partenariat {
-    height: auto;
-    padding: 4rem 1.5rem;
-  }
-
-  .hero-text {
-    padding: 1rem;
-    max-width: 100%;
-  }
-
-  .hero-partenariat h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-
-  .hero-partenariat p {
-    font-size: 1rem;
-    margin-top: 0.8rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-partenariat h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero-partenariat p {
-    font-size: 0.95rem;
-  }
-}
-
-
-/* === PRESENTATION === */
-.presentation {
-  text-align: center;
-  padding: 6rem 2rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.presentation h2 {
-  font-size: 2rem;
-  color: #A259FF;
-  margin-bottom: 1.5rem;
-}
-
-.presentation p {
-  color: rgba(255,255,255,0.85);
   margin-bottom: 2rem;
 }
 
-.logo-partenaire img {
-  height: 400px;
-  filter: drop-shadow(0 0 12px rgba(76,201,240,0.5));
-  animation: glow 3s infinite ease-in-out;
-}
+/* === SECTIONS GÉNÉRALES === */
 
-/* === INFOS CONTACT === */
+.presentation,
+.collaboration,
 .infos {
+  padding: 6rem 2rem;
   text-align: center;
-  padding: 5rem 2rem;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  position: relative;
 }
 
+.presentation h2,
+.collaboration h2,
 .infos h2 {
   font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.presentation h2 {
+  color: #A259FF;
+}
+
+.collaboration h2,
+.infos h2 {
   color: #4CC9F0;
-  margin-bottom: 3rem;
+}
+
+.presentation-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+  backdrop-filter: blur(12px);
+}
+
+.presentation-card p {
+  color: rgba(255,255,255,0.86);
+  margin-bottom: 1.4rem;
+}
+
+.presentation-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* === COLLABORATION INTERACTIVE === */
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: rgba(255,255,255,0.82);
+}
+
+.collab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.collab-card {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 2rem;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  font-family: 'Poppins', sans-serif;
+}
+
+.collab-card i {
+  font-size: 2.2rem;
+  color: #4CC9F0;
+  margin-bottom: 1rem;
+}
+
+.collab-card h3 {
+  font-size: 1.1rem;
+}
+
+.collab-card:hover,
+.collab-card.active {
+  transform: translateY(-7px);
+  background: linear-gradient(135deg, rgba(76,201,240,0.18), rgba(162,89,255,0.18));
+  box-shadow: 0 12px 32px rgba(76,201,240,0.25);
+  border-color: rgba(76,201,240,0.35);
+}
+
+.collab-card.active i {
+  color: #A259FF;
+}
+
+.collab-result {
+  max-width: 850px;
+  margin: 2.5rem auto 0;
+  padding: 2rem;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(76,201,240,0.22);
+  color: rgba(255,255,255,0.9);
+  box-shadow: 0 0 28px rgba(76,201,240,0.15);
+  animation: softPulse 4s infinite ease-in-out;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    box-shadow: 0 0 22px rgba(76,201,240,0.14);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(162,89,255,0.25);
+  }
+}
+
+/* === INFOS === */
+
+.infos {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
 }
 
 .info-grid {
@@ -231,15 +321,30 @@ body {
 
 .info-card {
   background: rgba(255,255,255,0.07);
-  border-radius: 18px;
+  border-radius: 20px;
   padding: 2rem;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .info-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(162,89,255,0.25);
+}
+
+.info-card i {
+  font-size: 2rem;
+  color: #4CC9F0;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: rgba(255,255,255,0.85);
 }
 
 .info-card a {
@@ -252,10 +357,11 @@ body {
   color: #A259FF;
 }
 
-/* === BOUTON === */
+/* === BOUTONS === */
+
 .btn-primary {
   display: inline-block;
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-decoration: none;
   background-color: #4CC9F0;
   color: #1E1B3A;
@@ -263,27 +369,20 @@ body {
   border-radius: 30px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(97, 201, 233, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .btn-primary:hover {
   background-color: #A259FF;
   color: #fff;
-  transform: translateY(-2px);
-}
-
-/* === EFFET D’OMBRE SOUS LES BOUTONS === */
-.btn-primary, .btn-secondary {
-  box-shadow: 0 8px 20px rgba(97, 201, 233, 0.3); /* ombre douce bleutée */
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover, .btn-secondary:hover {
-  box-shadow: 0 10px 25px rgba(162, 89, 255, 0.4); /* ombre plus marquée au survol */
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(162, 89, 255, 0.4);
 }
 
 /* === FOOTER === */
+
 .footer {
   background: rgba(30, 27, 58, 0.95);
   color: #fff;
@@ -369,7 +468,71 @@ body {
   color: rgba(255,255,255,0.7);
 }
 
+/* === FADE === */
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RESPONSIVE === */
+
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(30,27,58,0.95);
+    position: absolute;
+    top: 95px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero-partenariat {
+    min-height: auto;
+    padding: 5rem 1.5rem;
+  }
+
+  .hero-partenariat h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-partenariat p {
+    font-size: 1rem;
+  }
+
+  .presentation,
+  .collaboration,
+  .infos {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .presentation-card,
+  .collab-result {
+    padding: 1.6rem;
+  }
+
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -380,66 +543,13 @@ body {
   }
 }
 
-
-/* === FADE === */
-.fade-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-.fade-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(30,27,58,0.95);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 2rem 0;
-  }
-
-  .nav-links.active { display: flex; }
-  .burger { display: block; }
-  .hero-services h1 { font-size: 2.4rem; }
-  .services-grid, .why-grid { grid-template-columns: 1fr; }
-}
-
-/* === FIX CENTRAGE LOGO PARTENAIRE + RESPONSIVE === */
-.logo-partenaire {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem auto;
-  width: 100%;
-  text-align: center;
-}
-
-.logo-partenaire img {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Adaptation mobile */
-@media (max-width: 768px) {
-  .logo-partenaire img {
-    width: 80%;
-    height: auto;
-  }
-}
-
 @media (max-width: 480px) {
-  .logo-partenaire img {
-    width: 90%;
+  .hero-partenariat h1 {
+    font-size: 1.8rem;
+  }
+
+  .collab-card,
+  .info-card {
+    padding: 1.5rem;
   }
 }
-
