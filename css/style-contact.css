@@ -438,3 +438,124 @@ input:focus, textarea:focus {
     font-size: 2.4rem;
   }
 }
+
+
+
+.bonus-message {
+  display: none;
+  background: rgba(76,201,240,0.15);
+  border: 1px solid rgba(76,201,240,0.3);
+  color: #4CC9F0;
+  padding: 1rem;
+  border-radius: 15px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.trust-box {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.trust-box div {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.form-progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.form-progress-bar {
+  width: 33%;
+  height: 100%;
+  background: linear-gradient(90deg, #4CC9F0, #A259FF);
+  transition: width 0.4s ease;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+  animation: formFade 0.4s ease;
+}
+
+@keyframes formFade {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-step h3 {
+  margin-bottom: 2rem;
+  color: #4CC9F0;
+  font-size: 1.4rem;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.choice-btn,
+.budget-btn {
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.choice-btn:hover,
+.budget-btn:hover {
+  background: linear-gradient(135deg, rgba(76,201,240,0.28), rgba(162,89,255,0.28));
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(76,201,240,0.25);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #4CC9F0;
+  border: 1px solid #4CC9F0;
+  border-radius: 30px;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .form-actions {
+    flex-direction: column;
+  }
+}
