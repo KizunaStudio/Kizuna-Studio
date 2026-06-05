@@ -548,3 +548,138 @@ body {
   box-shadow: 0 10px 25px rgba(162, 89, 255, 0.4); /* ombre plus marquée au survol */
   transform: translateY(-3px);
 }
+
+/* ===== FILTRES PORTFOLIO ===== */
+
+.portfolio-filters {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.portfolio-filters h2 {
+  color: #4CC9F0;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-filters p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 2rem;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-btn {
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(76,201,240,0.15);
+}
+
+.filter-btn.active {
+  background: linear-gradient(
+    135deg,
+    #4CC9F0,
+    #A259FF
+  );
+  box-shadow: 0 0 20px rgba(76,201,240,0.35);
+}
+
+/* === GALERIE FILTRABLE === */
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(76,201,240,0.28);
+}
+
+.gallery-item img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 8px rgba(76,201,240,0.25));
+}
+
+.gallery-item.hidden {
+  display: none;
+}
+
+/* === LIGHTBOX === */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 8, 25, 0.92);
+  backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  padding: 2rem;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 18px;
+  box-shadow: 0 0 35px rgba(76,201,240,0.35);
+  animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
