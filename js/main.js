@@ -202,7 +202,7 @@ const bonuses = [
   "Checklist pour lancer votre site web",
   "Conseils Instagram personnalisés",
   "Mini diagnostic identité visuelle",
-  "-5% sur la création d’un logo",
+  "-5% sur une identité visuelle",
   "-5% sur une affiche ou un flyer",
   "Conseil gratuit sur votre nom de domaine",
   "Astuce marketing personnalisée"
